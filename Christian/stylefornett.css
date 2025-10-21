@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff; /* Correct */
+  margin: 0;
+}
+
+header {
+  background-color: #2E8B57;
+  color: white;
+  padding: 10px 20px;
+}
+
+.top-line {
+  height: 40px;
+  background-color: #ffffff; /* Correct */
+  width: 80%;
+  margin-bottom: 0.2px;
+}
+
+img {
+  display: block;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #2E8B57;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
