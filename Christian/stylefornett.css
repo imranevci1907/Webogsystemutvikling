@@ -1,21 +1,23 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #ffffff; /* Correct */
+  background-color: #ffffff;
   margin: 0;
 }
 
 header {
   background-color: #2E8B57;
   color: white;
+  border-bottom: 3px solid red; 
   padding: 10px 20px;
+   
 }
 
 .top-line {
   height: 4px;
-  background-color: #2E8B57; /* your current color */
+  background-color: #2E8B57; 
   width: 80%;
   margin: 10px auto;
-  border-bottom: 3px solid red; /* adds a red line under it */
+  border-bottom: 3px solid red; 
   border-radius: 2px;
 }
 
