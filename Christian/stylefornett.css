@@ -11,10 +11,15 @@ header {
 }
 
 .top-line {
-  height: 40px;
-  background-color: #ffffff; /* Correct */
+ .top-line {
+  height: 4px;
+  background-color: #2E8B57; /* your current color */
   width: 80%;
-  margin-bottom: 0.2px;
+  margin: 10px auto;
+  border-bottom: 3px solid red; /* adds a red line under it */
+  border-radius: 2px;
+}
+
 }
 
 img {
@@ -27,5 +32,6 @@ footer {
   background-color: #2E8B57;
   color: white;
   text-align: center;
+  border-top: 3px solid red;
   padding: 10px;
 }
