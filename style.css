@@ -7,18 +7,10 @@ body {
 }
 
 header {
-  background: linear-gradient(135deg, #1a5276, #2c3e50);
+  background: #2c3e50;
   color: white;
-  padding: 40px 0 20px;
+  padding: 20px 0;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-header h1 {
-  font-size: 2.5em;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 nav {
@@ -35,7 +27,6 @@ nav ul {
   border-radius: 10px;
   width: 220px;
   text-align: left;
-  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
 }
 
 nav ul li {
@@ -53,7 +44,6 @@ nav ul li strong {
 nav ul li a {
   text-decoration: none;
   color: #333;
-  transition: 0.2s;
 }
 
 nav ul li a:hover {
@@ -66,17 +56,10 @@ main {
   padding: 40px;
 }
 
-main img {
-  border-radius: 15px;
-  margin-top: 20px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-}
-
 footer {
   background: #2c3e50;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 10px;
   margin-top: 40px;
-  font-size: 0.9em;
 }
