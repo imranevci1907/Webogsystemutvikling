@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gruppekontrakt</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-b from-gray-50 to-gray-100 text-gray-900 font-sans">
+    <div id="root" class="min-h-screen"></div>
+
+    <script type="module">
+      import React from "https://esm.sh/react";
+      import ReactDOM from "https://esm.sh/react-dom/client";
+      import { motion } from "https://esm.sh/framer-motion";
+
+      function Gruppekontrakt() {
+        const fadeUp = {
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0 },
+        };
+
+        const sections = [
+          {
+            title: "MÅLSETTING OG OPPTREDEN",
+            content: [
+              {
+                q: "Hva er forventningene til prosjektarbeidet?",
+                a: "(best mulig resultat? Ha det gøy? Være sosial osv)\nBli kjent med hverandre, samarbeide.",
+              },
+              {
+                q: "Hvordan sette spesifikke mål underveis i prosessen?",
+                a: "Vi snakker sammen og setter mål til hverandre. Som f.eks i dag tar du notater. Lage frister slik at alle henger med. At vi minner hverandre på i gruppa.",
+              },
+              {
+                q: "Hvordan sette klare standarder for gruppeopptreden, og øke medlemmenes identifisering med prosjektet?",
+                a: "Høre hva alle har å si og diskutere sammen. Forventer at alle bidrar og deltar.",
+              },
+              {
+                q: "Hvordan skal vi planlegge, koordinere og synkronisere aktiviteter, informasjon og oppgaver?",
+                a: "Planlegger gjennom messenger og blir enige gjennom der. Lage tidsplaner om hvor og når vi møtes.",
+              },
+            ],
+          },
+          {
+            title: "KOMMUNIKASJON",
+            content: [
+              {
+                q: "Hvilke oppgaver og aktiviteter krever fysisk oppmøte? Hva kan vi gjøre digitalt?",
+                a: "Når vi først begynner oppgaven og skal lage en plan, er det greit at vi møtes fysisk. Etter det kan det skje digitalt. Hele gruppekontrakten i seg selv bør også gjøres med fysisk oppmøte.",
+              },
+              {
+                q: "Hvor ofte bør gruppen møtes? Skal vi ha faste møtedager? Når kan vi møtes?",
+                a: "1 gang i uka. Etter forelesninger f.eks.",
+              },
+              {
+                q: "Hvordan skal vi holde kontakten? Hvilke verktøy skal vi bruke, til hva?",
+                a: "Messenger. Forventer at alle sjekker den daglig for å holde oss oppdatert.",
+              },
+              {
+                q: "Andre viktige aspekter ved kommunikasjon",
+                a: "Jevnlig kommunikasjon med hverandre og oppdatere hverandre hvis det er noe som de andre bør vite.",
+              },
+            ],
+          },
+          {
+            title: "DELTAKELSE I MØTER OG GRUPPEARBEID",
+            content: [
+              {
+                q: "Hvilke regler skal vi ha i forhold til å komme tidsnok på møter, levere i tide osv?",
+                a: "Forventer vi holder avtaler og møter til tide. Hvis man ikke svarer på meldinger og ikke møter opp flere ganger, så blir man kastet ut.\nSanksjoner:\nHvis man ikke kommer til tide? Spandere noe til alle fra kantina.\nHvis man ikke leverer til tide? Rapportere til foreleseren.",
+              },
+              {
+                q: "Hvordan skal møtene foregå?",
+                a: "Kan være både formelt og uformelt. Notatene bytter vi på i mellom. Agenda kan være greit for å få gjort ting mer effektivt.",
+              },
+              {
+                q: "Hvordan sikrer vi at alle har mulighet til å delta og bidra på møter?",
+                a: "Ta hensyn til hverandre. Finne ting som passer for alle sammen i gruppa. Hvis noen ikke kan delta på møter så sender man en melding på messenger med ideer eller forslag.",
+              },
+              {
+                q: "Hva gjør vi hvis noen ikke leverer/fullfører oppgaver de har tatt på seg?",
+                a: "Da blir det spandering i kantina på de andre og en liten tilsnakk at vedkommende må skjerpe seg.",
+              },
+            ],
+          },
+          {
+            title: "KONFLIKTER OG PROBLEMLØSNING",
+            content: [
+              {
+                q: "Hvordan kan vi løse konflikter i en tidlig fase?",
+                a: "Snakke sammen, kommunisere og ta hensyn til hverandre. Diskutere hvorfor vi er uenige og finne en mellomløsning som passer for alle.",
+              },
+              {
+                q: "Hva skal gjøres dersom noen bryter kontrakten?",
+                a: "Hvis man ikke følger kontrakten så blir man kastet ut av gruppa. Men vi gir 1 forsøk.",
+              },
+              {
+                q: "Andre viktige aspekter med hensyn til konflikter og problemløsning",
+                a: "Ikke noe mer enn å holde kommunikasjon jevnlig.",
+              },
+            ],
+          },
+        ];
+
+        return (
+          <div>
+            <header className="text-center py-12 bg-white shadow-md">
+              <h1 className="text-4xl font-extrabold tracking-tight mb-2">
+                Gruppekontrakt
+              </h1>
+              <p className="text-gray-500">
+                Teksten er brukt som du skrev den — ingen endringer i innhold.
+              </p>
+            </header>
+
+            <main className="max-w-5xl mx-auto p-6 grid gap-10">
+              {sections.map((section, i) => (
+                <motion.section
+                  key={i}
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 0.6, delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-2xl shadow p-8 hover:shadow-lg transition"
+                >
+                  <h2 className="text-2xl font-bold mb-6 text-indigo-700 border-b pb-2">
+                    {section.title}
+                  </h2>
+                  <div className="space-y-4">
+                    {section.content.map((item, j) => (
+                      <div key={j}>
+                        <h3 className="font-semibold text-lg">{item.q}</h3>
+                        <p className="whitespace-pre-line mt-2 text-gray-700 leading-relaxed">
+                          {item.a}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </motion.section>
+              ))}
+            </main>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<Gruppekontrakt />);
+    </script>
+  </body>
+</html>
