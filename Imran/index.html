@@ -6,12 +6,21 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
+  html, body {
+    height: 100%; /* ← viktig! fyller hele høyden */
+    margin: 0; /* fjerner standard margin */
+  }
+
   body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom right, #ffffff, #e6e6ff, #f9f4dc); /* hvit → lys blå → lys gull */
+    background: linear-gradient(to bottom right, #ffffff, #e6e6ff, #f9f4dc);
     color: #333;
     text-align: center;
-    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* eller 'center' hvis du vil sentrere alt vertikalt */
+    padding: 30px;
   }
 
   h1 {
