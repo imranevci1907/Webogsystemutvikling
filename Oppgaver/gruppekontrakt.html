@@ -1,151 +1,166 @@
 <!DOCTYPE html>
 <html lang="no">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gruppekontrakt</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-gradient-to-b from-gray-50 to-gray-100 text-gray-900 font-sans">
-    <div id="root" class="min-h-screen"></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gruppekontrakt</title>
+  <style>
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      margin: 0;
+      line-height: 1.6;
+    }
 
-    <script type="module">
-      import React from "https://esm.sh/react";
-      import ReactDOM from "https://esm.sh/react-dom/client";
-      import { motion } from "https://esm.sh/framer-motion";
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
 
-      function Gruppekontrakt() {
-        const fadeUp = {
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0 },
-        };
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
 
-        const sections = [
-          {
-            title: "MÅLSETTING OG OPPTREDEN",
-            content: [
-              {
-                q: "Hva er forventningene til prosjektarbeidet?",
-                a: "(best mulig resultat? Ha det gøy? Være sosial osv)\nBli kjent med hverandre, samarbeide.",
-              },
-              {
-                q: "Hvordan sette spesifikke mål underveis i prosessen?",
-                a: "Vi snakker sammen og setter mål til hverandre. Som f.eks i dag tar du notater. Lage frister slik at alle henger med. At vi minner hverandre på i gruppa.",
-              },
-              {
-                q: "Hvordan sette klare standarder for gruppeopptreden, og øke medlemmenes identifisering med prosjektet?",
-                a: "Høre hva alle har å si og diskutere sammen. Forventer at alle bidrar og deltar.",
-              },
-              {
-                q: "Hvordan skal vi planlegge, koordinere og synkronisere aktiviteter, informasjon og oppgaver?",
-                a: "Planlegger gjennom messenger og blir enige gjennom der. Lage tidsplaner om hvor og når vi møtes.",
-              },
-            ],
-          },
-          {
-            title: "KOMMUNIKASJON",
-            content: [
-              {
-                q: "Hvilke oppgaver og aktiviteter krever fysisk oppmøte? Hva kan vi gjøre digitalt?",
-                a: "Når vi først begynner oppgaven og skal lage en plan, er det greit at vi møtes fysisk. Etter det kan det skje digitalt. Hele gruppekontrakten i seg selv bør også gjøres med fysisk oppmøte.",
-              },
-              {
-                q: "Hvor ofte bør gruppen møtes? Skal vi ha faste møtedager? Når kan vi møtes?",
-                a: "1 gang i uka. Etter forelesninger f.eks.",
-              },
-              {
-                q: "Hvordan skal vi holde kontakten? Hvilke verktøy skal vi bruke, til hva?",
-                a: "Messenger. Forventer at alle sjekker den daglig for å holde oss oppdatert.",
-              },
-              {
-                q: "Andre viktige aspekter ved kommunikasjon",
-                a: "Jevnlig kommunikasjon med hverandre og oppdatere hverandre hvis det er noe som de andre bør vite.",
-              },
-            ],
-          },
-          {
-            title: "DELTAKELSE I MØTER OG GRUPPEARBEID",
-            content: [
-              {
-                q: "Hvilke regler skal vi ha i forhold til å komme tidsnok på møter, levere i tide osv?",
-                a: "Forventer vi holder avtaler og møter til tide. Hvis man ikke svarer på meldinger og ikke møter opp flere ganger, så blir man kastet ut.\nSanksjoner:\nHvis man ikke kommer til tide? Spandere noe til alle fra kantina.\nHvis man ikke leverer til tide? Rapportere til foreleseren.",
-              },
-              {
-                q: "Hvordan skal møtene foregå?",
-                a: "Kan være både formelt og uformelt. Notatene bytter vi på i mellom. Agenda kan være greit for å få gjort ting mer effektivt.",
-              },
-              {
-                q: "Hvordan sikrer vi at alle har mulighet til å delta og bidra på møter?",
-                a: "Ta hensyn til hverandre. Finne ting som passer for alle sammen i gruppa. Hvis noen ikke kan delta på møter så sender man en melding på messenger med ideer eller forslag.",
-              },
-              {
-                q: "Hva gjør vi hvis noen ikke leverer/fullfører oppgaver de har tatt på seg?",
-                a: "Da blir det spandering i kantina på de andre og en liten tilsnakk at vedkommende må skjerpe seg.",
-              },
-            ],
-          },
-          {
-            title: "KONFLIKTER OG PROBLEMLØSNING",
-            content: [
-              {
-                q: "Hvordan kan vi løse konflikter i en tidlig fase?",
-                a: "Snakke sammen, kommunisere og ta hensyn til hverandre. Diskutere hvorfor vi er uenige og finne en mellomløsning som passer for alle.",
-              },
-              {
-                q: "Hva skal gjøres dersom noen bryter kontrakten?",
-                a: "Hvis man ikke følger kontrakten så blir man kastet ut av gruppa. Men vi gir 1 forsøk.",
-              },
-              {
-                q: "Andre viktige aspekter med hensyn til konflikter og problemløsning",
-                a: "Ikke noe mer enn å holde kommunikasjon jevnlig.",
-              },
-            ],
-          },
-        ];
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
 
-        return (
-          <div>
-            <header className="text-center py-12 bg-white shadow-md">
-              <h1 className="text-4xl font-extrabold tracking-tight mb-2">
-                Gruppekontrakt
-              </h1>
-              <p className="text-gray-500">
-                Teksten er brukt som du skrev den — ingen endringer i innhold.
-              </p>
-            </header>
+    section {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.5rem;
+    }
 
-            <main className="max-w-5xl mx-auto p-6 grid gap-10">
-              {sections.map((section, i) => (
-                <motion.section
-                  key={i}
-                  variants={fadeUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  transition={{ duration: 0.6, delay: i * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-2xl shadow p-8 hover:shadow-lg transition"
-                >
-                  <h2 className="text-2xl font-bold mb-6 text-indigo-700 border-b pb-2">
-                    {section.title}
-                  </h2>
-                  <div className="space-y-4">
-                    {section.content.map((item, j) => (
-                      <div key={j}>
-                        <h3 className="font-semibold text-lg">{item.q}</h3>
-                        <p className="whitespace-pre-line mt-2 text-gray-700 leading-relaxed">
-                          {item.a}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </motion.section>
-              ))}
-            </main>
-          </div>
-        );
-      }
-      const root = ReactDOM.createRoot(document.getElementById("root"));
-      root.render(<Gruppekontrakt />);
-    </script>
-  </body>
+    h2 {
+      color: #003366;
+      border-left: 4px solid #003366;
+      padding-left: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    strong {
+      color: #000;
+    }
+
+    footer {
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gruppekontrakt</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Målsetting og opptreden</h2>
+
+      <p><strong>Hva er forventningene til prosjektarbeidet?</strong><br>
+      (best mulig resultat? Ha det gøy? Være sosial osv)</p>
+
+      <p>Bli kjent med hverandre, samarbeide.</p>
+
+      <p><strong>Hvordan sette spesifikke mål underveis i prosessen?</strong></p>
+
+      <p>Vi snakker sammen og setter mål til hverandre. Som f.eks i dag tar du notater. Lage frister slik at alle henger med. At vi minner hverandre på i gruppa.</p>
+
+      <p><strong>Hvordan sette klare standarder for gruppeopptreden, og øke medlemmenes identifisering med prosjektet?</strong></p>
+
+      <p><strong>Hvordan skal vi planlegge, koordinere og synkronisere aktiviteter, informasjon og oppgaver?</strong></p>
+
+      <p>Høre hva alle har å si og diskutere sammen. Forventer at alle bidrar og deltar.</p>
+
+      <p>Planlegger gjennom messenger og blir enige gjennom der. Lage tidsplaner om hvor og når vi møtes.</p>
+    </section>
+
+    <section>
+      <h2>Kommunikasjon</h2>
+
+      <p><strong>Hvilke oppgaver og aktiviteter krever fysisk oppmøte? Hva kan vi gjøre digitalt?</strong></p>
+
+      <p>Hvor ofte bør gruppen møtes? Skal vi ha faste møtedager? Når kan vi møtes?<br>
+      (noter ting du vet de andre bør ta hensyn til. Jobb, familie, sykdom osv)</p>
+
+      <p>Når vi ført begynner oppgaven og skal lage en plan, er det greit at vi møtes fysisk. Etter det kan det skje digitalt. Hele gruppekontrakten i seg selv bør også gjøre med fysisk oppmøte.</p>
+
+      <p>1 gang i uka. Etter forelesninger f.eks.</p>
+
+      <p><strong>Hvordan skal vi holde kontakten? Hvilke verktøy skal vi bruke, til hva?</strong></p>
+
+      <p><strong>Andre viktige aspekter ved kommunikasjon</strong></p>
+
+      <p>Messenger. Forventer at alle sjekker den daglig for å holde oss oppdatert.</p>
+
+      <p>Jevnlig kommunikasjon med hverandre og oppdatere hverandre hvis det er noe som de andre bør vite.</p>
+    </section>
+
+    <section>
+      <h2>Deltakelse i møter og gruppearbeid</h2>
+
+      <p><strong>Hvilke regler skal vi ha i forhold til å komme tidsnok på møter, levere i tide osv?</strong><br>
+      (Her er det viktig at dere også noterer sanksjoner – Hva skal til for å bli kastet ut?)</p>
+
+      <p><strong>Hvordan skal møtene foregå?</strong> (formelt/uformelt, agenda på forhånd? Hvem tar notater?)</p>
+
+      <p>Forventer vi holder avtaler og møter til tide. Hvis man ikke svarer på meldinger og ikke møter opp flere ganger, så blir man kastet ut.</p>
+
+      <p><strong>Sanksjoner:</strong></p>
+
+      <p><strong>Hvis man ikke kommer til tide?</strong><br>
+      Spandere noe til alle fra kantina</p>
+
+      <p><strong>Hvis man ikke leverer til tide?</strong><br>
+      Rapportere til foreleseren</p>
+
+      <p>Kan være både formelt og uformelt. Notatene bytter vi på i mellom. Agenda kan være greit for å få gjort ting mer effektivt.</p>
+
+      <p><strong>Hvordan sikrer vi at alle har mulighet til å delta og bidra på møter?</strong> (noen er kanskje ikke så glad i å snakke f.eks) Hvis noen ikke kan delta, hva gjør vi da?</p>
+
+      <p><strong>Hva gjør vi hvis noen ikke leverer/fullfører oppgaver de har tatt på seg?</strong><br>
+      (sanksjonsmuligheter nok en gang…)</p>
+
+      <p>Ta hensyn til hverandre. Finne ting som passer for alle sammen i gruppa. Hvis noen ikke kan delta på møter så sender man en melding på messenger med ideer eller forslag.</p>
+
+      <p>Da blir det spandering i kantina på de andre og en liten tilsnakk at vedkommende må skjerpe seg.</p>
+    </section>
+
+    <section>
+      <h2>Konflikter og problemløsning</h2>
+
+      <p><strong>Hvordan kan vi løse konflikter i en tidlig fase?</strong></p>
+
+      <p><strong>Hva skal gjøres dersom noen bryter kontrakten?</strong><br>
+      (små og store konsekvenser, kjøpe en kaffe om man kommer for sent, kastes ut av gruppa om man ikke bidrar?)</p>
+
+      <p>Snakke sammen, kommunisere og ta hensyn til hverandre. Diskutere hvorfor vi er uenige og finne en mellomløsning som passer for alle.</p>
+
+      <p>Hvis man ikke følger kontrakten så blir man kastet ut av gruppa. Men vi gir 1 forsøk.</p>
+
+      <p><strong>Andre viktige aspekter med hensyn til konflikter og problemløsning</strong></p>
+
+      <p>Ikke noe mer enn å holde kommunikasjon jevnlig.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Gruppekontrakt</p>
+  </footer>
+</body>
 </html>
