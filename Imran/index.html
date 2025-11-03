@@ -5,35 +5,46 @@
   <title>Om Imran</title>
   <link rel="stylesheet" href="style.css">
 
-  <style> body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  text-align: center;
-  margin: 30px;
-}
+  <style>
+  html, body {
+    height: 100%; /* ← viktig! fyller hele høyden */
+    margin: 0; /* fjerner standard margin */
+  }
 
-h1 {
-  color: darkblue;
-}
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #ffffff, #e6e6ff, #f9f4dc);
+    color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* eller 'center' hvis du vil sentrere alt vertikalt */
+    padding: 30px;
+  }
 
-p {
-  font-size: 18px;
-}
+  h1 {
+    color: darkblue;
+  }
 
-a {
-  color: darkred;
-  text-decoration: none;
-  font-weight: bold;
-}
+  p {
+    font-size: 18px;
+  }
 
-a:hover {
-  text-decoration: underline;
-}
+  a {
+    color: darkred;
+    text-decoration: none;
+    font-weight: bold;
+  }
 
-img {
-  margin-top: 15px;
-}</style>
+  a:hover {
+    text-decoration: underline;
+  }
+
+  img {
+    margin-top: 15px;
+  }
+  </style>
 </head>
 <body>
   <h1>Hei, jeg heter Imran!</h1>   
