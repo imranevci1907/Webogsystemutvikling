@@ -1,0 +1,247 @@
+
+<!-- ========================== -->
+<!--   Johannes sin HTML/CSS   -->
+<!-- ========================== -->
+
+<h2>Min HTML/CSS-side – Cristiano Ronaldo</h2>
+<pre><code>
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>Cristiano Ronaldo</title>
+  <style>
+    body {
+      background-color: lightyellow;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      color: darkblue;
+      text-align: left;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    img {
+      width: 300px;
+      border-radius: 10px;
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cristiano Ronaldo</h1>
+  <p>Jeg har valgt Cristiano Ronaldo fordi han er en stor inspirasjon for meg. Han viser at hardt arbeid, disiplin og vilje kan ta deg helt til toppen.</p>
+  <img src="https://assets.manutd.com/AssetPicker/images/0/0/10/126/687707/Legends-Profile_Cristiano-Ronaldo1523460877263.jpg" alt="Cristiano Ronaldo">
+  <h2>Lenke</h2>
+  <p>Les mer om <a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo" target="_blank">Cristiano Ronaldo her</a>.</p>
+</body>
+</html>
+</code></pre>
+
+<!-- ========================== -->
+<!--       Ahmed sin kode        -->
+<!-- ========================== -->
+
+<h2>Ahmed sin HTML/CSS-side</h2>
+<pre><code>
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+  <style>
+    body {
+      background-color: lightblue;
+    }
+
+    h1 {
+      color: black;
+      text-align: left;
+    }
+
+    p {
+      font-family: verdana;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Me, myself and I</h1>
+<p> Jeg heter Ahmed, er 19 år gammel og bor i Horten. Jeg er den eldste av tre barn og har en interesse for fotball.</p>
+<p>På bildet nedenfor ser du et bilde av meg sammen med min største inspirasjon, mamma.</p>
+<img src="https://raw.githubusercontent.com/imranevci1907/Webogsystemutvikling/refs/heads/main/Ahmed/Ahmedbilde.jpg" alt="Ahmed sammen med mamma" width="250" height="275">
+
+<h2>Lenke</h2>
+<p>Besøk THE WORLD CHAMPIONS <a href="https://www.chelseafc.com/en" target="_blank">Chelsea sin nettside</a>.</p>
+
+</body>
+</html>
+</code></pre>
+
+<!-- ========================== -->
+<!--      Christian sin kode     -->
+<!-- ========================== -->
+
+<h2>Christian sin HTML/CSS-side</h2>
+<pre><code>
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om meg</title>
+  <link rel="stylesheet" href="Christian/stylefornett.css">
+</head>
+<body>
+    
+<header>
+    <h1>Velkommen til min sin side</h1>
+</header>
+
+<main>
+  <div class="top-line"></div>
+    <h2>Hei!</h2>
+    <p>Jeg heter <strong>Christian</strong> og jeg støtter Liverpool</p>
+
+    <h3>Interesser</h3>
+    <p>Jeg elsker fotball og historie</p>
+
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" alt="Liverpool FC" width="200">
+    <a href="https://www.liverpoolfc.com" style="font-size: 24px; color: red;">
+      Besøk Liverpool Football Club sin nettside
+    </a>
+</main>
+
+<footer>
+  <p>Laget av Christian © 2025</p>
+</footer>
+
+</body>
+</html>
+</code></pre>
+
+<!-- ========================== -->
+<!--   Imran sin HTML/CSS   -->
+<!-- ========================== -->
+
+<h2>Min HTML/CSS-side – Imran</h2>
+<pre><code>
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>Om Imran</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      text-align: center;
+      margin: 30px;
+    }
+
+    h1 {
+      color: darkblue;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    a {
+      color: darkred;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hei, jeg heter Imran!</h1>   
+  <p>Jeg er glad i fotball⚽</p>
+  <p>Favoritt fotballaget mitt er <strong>Real Madrid</strong></p>
+
+  <h2>Lenke</h2>
+  <p>
+    Besøk <a href="https://www.realmadrid.com/en-US" target="_blank">Real Madrid sin nettside</a>
+  </p>
+
+  <h2>Bilde</h2>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV6MJKhlfJbXglogQHcVsu5zPi9ewMv7lQlQ&s" alt="Real Madrid logo" width="450">
+</body>
+</html>
+</code></pre>
+
+<!-- ========================== -->
+<!--   Edgaras sin HTML/CSS    -->
+<!-- ========================== -->
+
+<h2>Min HTML/CSS-side – Edgaras</h2>
+<pre><code>
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>Min nettside</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0a1a62; /* Barca-blå */
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #ffcb00; /* Barca-gul */
+    }
+
+    p {
+      max-width: 500px;
+      margin: 0 auto 20px;
+    }
+
+    img {
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      color: #fff;
+      background: #a50044; /* Barca-rød */
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    a:hover {
+      background: #ffcb00;
+      color: #0a1a62;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hei, jeg heter Edgaras</h1>
+  <p>Dette er en nettside om fotball. <br> Favorittlaget mitt er <strong>Barcelona</strong>. Jeg har vært fan av klubben i mange år, og dette var litt info om meg selv.</p>
+  <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg" alt="Barcelona logo">
+  <br>
+  <a href="https://www.fcbarcelona.com/en/" target="_blank">Barcelona hjemmeside</a>
+</body>
+</html>
+</code></pre>
