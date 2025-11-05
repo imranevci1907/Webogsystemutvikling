@@ -1,191 +1,129 @@
-<!doctype html>
-<html lang="nb">
+<!DOCTYPE html>
+<html lang="no">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hva mener vi med systemutvikling? — Forklaring</title>
-  <meta name="description" content="Kort og ryddig forklaring på hva systemutvikling og systemutviklingsmetoder er, hvorfor vi bruker metoder, samt kildehenvisning." />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hva mener vi med systemutvikling?</title>
   <style>
-    :root{
-      --bg:#f7f9fb; --card:#ffffff; --muted:#6b7280; --accent:#0f172a; --primary:#0b78ff;
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    *{box-sizing:border-box}
-    body{margin:0; background:var(--bg); color:var(--accent); line-height:1.6}
-    header{background:linear-gradient(90deg, #eef2ff, #ffffff); padding:2rem 1rem; border-bottom:1px solid #e6eefc}
-    .container{max-width:980px; margin:0 auto; padding:1rem}
-    h1{margin:0 0 .25rem; font-size:1.6rem}
-    p.lead{margin:0; color:var(--muted)}
-
-    main{display:grid; grid-template-columns: 250px 1fr; gap:1.25rem; padding:1rem}
-    nav.toc{position:sticky; top:1rem; align-self:start}
-    .toc-card{background:var(--card); padding:1rem; border-radius:12px; box-shadow:0 6px 18px rgba(16,24,40,0.06)}
-    .toc-card h2{font-size:1rem; margin:0 0 .5rem}
-    .toc-card a{display:block; color:var(--primary); text-decoration:none; margin:.25rem 0}
-
-    article.card{background:var(--card); padding:1.25rem; border-radius:12px; box-shadow:0 6px 18px rgba(16,24,40,0.04)}
-    section{margin-bottom:1rem}
-    h2{margin:0 0 .5rem; font-size:1.1rem}
-    h3{margin:.5rem 0}
-    .muted{color:var(--muted); font-size:.95rem}
-    .controls{display:flex; gap:.5rem; margin-bottom:1rem; align-items:center}
-    .search{flex:1}
-    input[type="search"], input[type="text"]{width:100%; padding:.5rem .6rem; border-radius:8px; border:1px solid #e6eefc}
-    button{background:var(--primary); color:#fff; border:0; padding:.5rem .75rem; border-radius:8px; cursor:pointer}
-    .btn-ghost{background:transparent; color:var(--primary); border:1px solid transparent}
-
-    .faq{border-left:4px solid #eef2ff; padding:.5rem 1rem; border-radius:6px}
-    footer{margin-top:1rem; color:var(--muted); font-size:.9rem}
-
-    /* Collapsible details style */
-    details{background:#fbfdff; padding:.6rem; border-radius:8px; margin:.5rem 0}
-    summary{cursor:pointer; font-weight:600}
-
-    /* Responsive */
-    @media (max-width:880px){
-      main{grid-template-columns:1fr;}
-      nav.toc{position:static}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f7f9fc;
+      color: #222;
+      margin: 40px auto;
+      max-width: 900px;
+      line-height: 1.6;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      background: #ffffff;
     }
 
-    /* Print-friendly */
-    @media print{
-      body{background:#fff;color:#000}
-      header, .controls, nav.toc{display:none}
-      article.card{box-shadow:none;border-radius:0}
+    h1, h2 {
+      text-align: center;
+      color: #003366;
+    }
+
+    h2 {
+      margin-top: 30px;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 5px;
+    }
+
+    p {
+      font-size: 17px;
+      margin-bottom: 15px;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    .bibliografi {
+      font-size: 15px;
+      color: #444;
+      background-color: #f1f4f8;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    a {
+      color: #b30000;
+      text-decoration: none;
+      font-weight: bold;
+      word-break: break-word;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-top: 40px;
+    }
+
+    /* Små forbedringer: knapp for utskrift og responsiv justering */
+    .print-btn {
+      display: inline-block;
+      margin: 10px auto 20px;
+      padding: 8px 14px;
+      background: #003366;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      body { margin: 20px; padding: 20px; }
+      p { font-size: 16px; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Hva mener vi med systemutvikling?</h1>
-      <p class="lead">Kortfattet forklaring av begrepet, metoder og hvorfor vi bruker systemutviklingsmetoder.</p>
-    </div>
-  </header>
+  <h1>Hva mener vi med systemutvikling?</h1>
 
-  <main class="container">
-    <nav class="toc">
-      <div class="toc-card">
-        <h2>Innhold</h2>
-        <a href="#definisjon">Hva mener vi med systemutvikling?</a>
-        <a href="#metoder">Hva mener vi med systemutviklingsmetoder?</a>
-        <a href="#typer">Typer metoder</a>
-        <a href="#hvorfor">Hvorfor bruker vi metoder?</a>
-        <a href="#chatgpt">Bruk av Chat‑GPT</a>
-        <a href="#kilder">Bibliografi</a>
-        <hr style="margin:.5rem 0">
-        <button onclick="window.print()" aria-label="Skriv ut">Skriv ut</button>
-      </div>
-    </nav>
+  <a class="print-btn" href="#" onclick="window.print();return false;">Skriv ut</a>
 
-    <article class="card" role="main">
-      <div class="controls">
-        <input class="search" id="search" type="search" placeholder="Søk i teksten... (tryk Enter)" aria-label="Søk i teksten">
-        <button id="clear">Tøm</button>
-      </div>
+  <div class="section">
+    <h2>Hva mener vi med systemutvikling?</h2>
+    <p>Systemutvikling defineres som arbeidet med å lage nye informasjonssystemer. Begrepet blir ofte brukt om selve prosessen og utformingen, men omfatter også arbeidet og metodene som kreves i hele prosessen. Dette kan for eksempel være å kartlegge problemstillinger, definere krav til programvaren, utvikle programvaren og sørge for kvalitet i alle ledd.</p>
+    <p>Etter at vi utvikler systemet, må det også driftes på en sikker måte og vedlikeholdes ved behov. Når man utvikler gode systemer så automatiserer man prosesser, forbedrer kundeopplevelsen og reduserer risikoen for dataangrep. Det er også viktig å tenke på at systemutvikling er et prosjektarbeid: prosjektet er problemorientert, tidsavgrenset, målrettet og sosialt. (Advania, u.d.)</p>
+  </div>
 
-      <section id="definisjon">
-        <h2>Hva mener vi med systemutvikling?</h2>
-        <p>Systemutvikling defineres som arbeidet med å lage nye informasjonssystemer. Begrepet blir ofte brukt om selve prosessen og utformingen, men omfatter også arbeidet og metodene som kreves i hele prosessen. Dette kan for eksempel være å kartlegge problemstillinger, definere krav til programvaren, utvikle programvaren og sørge for kvalitet i alle ledd.</p>
-        <p>Etter at vi utvikler systemet, må det også driftes på en sikker måte og vedlikeholdes ved behov. Når man utvikler gode systemer så automatiserer man prosesser, forbedrer kundeopplevelsen og reduserer risikoen for dataangrep. Det er også viktig å tenke på at systemutvikling er et prosjektarbeid: prosjektet er problemorientert, tidsavgrenset, målrettet og sosialt. (<span class="muted">Advania, u.d.</span>)</p>
-      </section>
+  <div class="section">
+    <h2>Hva mener vi med systemutviklingsmetoder?</h2>
+    <p>Systemutviklingsmetoder er metoder innenfor programvareutvikling som brukes til å planlegge og strukturere en prosess for å utvikle et informasjonssystem.</p>
+    <p>Systemutviklingsmetoder er delt inn i to kategorier: strukturerte metoder og lettvektsmetoder.</p>
+  </div>
 
-      <section id="metoder">
-        <h2>Hva mener vi med systemutviklingsmetoder?</h2>
-        <p>Systemutviklingsmetoder er metoder innenfor programvareutvikling som brukes til å planlegge og strukturere en prosess for å utvikle et informasjonssystem.</p>
-        <p>Metodene kan deles i to hovedkategorier: <strong>strukturerte metoder</strong> og <strong>lettvektsmetoder</strong>.</p>
-      </section>
+  <div class="section">
+    <h2>Typer metoder</h2>
+    <p><strong>Strukturerte metoder</strong> er fremgangsmåter som brukes for å utvikle informasjonssystemer på en planlagt, forutsigbar og systematisk måte. Kort sagt: klare trinn og regler for hvordan man går fram i utviklingsprosessen. Eksempler er Waterfall-metoden, design to schedule, shashimi-modellen og spiral-modellen.</p>
+    <p><strong>Lettvektsmetoder</strong> legger vekt på fleksibilitet, samarbeid og raske tilpasninger i stedet for tunge prosesser og mye dokumentasjon. Mindre krav til formell dokumentasjon, færre regler og mer fokus på mennesker og samarbeid. Eksempler er Crystal Methods, Extreme Programming, Lean Development og Scrum.</p>
+    <p>Det er også mulig å kombinere begge tilnærmingene. Ofte deler man systemutviklingen inn i faser — for eksempel analyse, design, utvikling, drift og vedlikehold — med forskjellige arbeidsoppgaver i hver fase.</p>
+  </div>
 
-      <section id="typer">
-        <h2>Typer metoder</h2>
-        <details>
-          <summary>Strukturerte metoder</summary>
-          <p class="muted">Strukturerte metoder er fremgangsmåter som brukes for å utvikle informasjonssystemer på en planlagt, forutsigbar og systematisk måte. Kort sagt: klare trinn og regler for hvordan man går fram i utviklingsprosessen.</p>
-          <p>Eksempler: Waterfall-metoden, design to schedule, shashimi‑modellen og spiral‑modellen.</p>
-        </details>
+  <div class="section">
+    <h2>Hvorfor bruker vi systemutviklingsmetoder?</h2>
+    <p>Systemutviklingsmetoder er viktige fordi IT-systemer er komplekse. Uten en metode blir arbeidet fort ustrukturert, dyrt og risikabelt. En metode gir rammer, retningslinjer og verktøy som hjelper utviklere og brukere til å jobbe mer effektivt sammen.</p>
+    <p>Noen av de viktigste grunnene til at vi bruker systemutviklingsmetoder er: struktur og kontroll, bedre kommunikasjon, redusere risiko samt kvalitet og brukertilpasning. Struktur og kontroll gir oss en plan for hvordan vi går fra idé til ferdig system og forhindrer at viktige steg blir hoppet over. Bedre kommunikasjon skaper et felles språk mellom utviklere, brukere og kunder. Metodene reduserer risiko ved å oppdage feil tidlig, og sikrer kvalitet og brukertilpasning ved å fange opp brukernes behov.</p>
+  </div>
 
-        <details>
-          <summary>Lettvektsmetoder</summary>
-          <p class="muted">Lettvektige metoder legger vekt på fleksibilitet, samarbeid og raske tilpasninger, i stedet for tunge prosesser og mye dokumentasjon. Mindre krav til formell dokumentasjon, færre regler og mer fokus på mennesker og samarbeid.</p>
-          <p>Eksempler: Crystal methods, Extreme Programming, Lean Development og Scrum.</p>
-        </details>
+  <div class="section">
+    <h2>Bruk av Chat-GPT i denne oppgaven</h2>
+    <p>Vi har brukt dette verktøyet til ideer og forslag som satte oss i gang med oppgaven. Deretter har vi bearbeidet, diskutert sammen og skrevet selvstendig. Alle våre svar er egne.</p>
+  </div>
 
-        <p>Det er også mulig å kombinere elementer fra begge tilnærmingene. Ofte deler man systemutviklingen inn i faser — for eksempel analyse, design, utvikling, drift og vedlikehold — med forskjellige arbeidsoppgaver i hver fase.</p>
-      </section>
+  <div class="section bibliografi">
+    <h2>Bibliografi</h2>
+    <p>Advania. (u.d.). <a href="https://www.advania.no/it-ordboka/systemutvikling" target="_blank" rel="noopener">Systemutvikling — Advania</a></p>
+  </div>
 
-      <section id="hvorfor">
-        <h2>Hvorfor bruker vi systemutviklingsmetoder?</h2>
-        <p>Systemutviklingsmetoder er viktige fordi IT‑systemer er komplekse. Uten en metode blir arbeidet fort ustrukturert, dyrt og risikabelt. En metode gir rammer, retningslinjer og verktøy som hjelper utviklere og brukere til å jobbe mer effektivt sammen.</p>
-
-        <h3>Noen viktige grunner</h3>
-        <ul>
-          <li><strong>Struktur og kontroll:</strong> En plan for hvordan vi går fra idé til ferdig system og forhindrer at viktige steg blir hoppet over.</li>
-          <li><strong>Bedre kommunikasjon:</strong> Felles språk mellom utviklere, brukere og kunder; modeller og diagrammer gjør komplekse systemer enklere å forstå.</li>
-          <li><strong>Redusere risiko:</strong> Metoder sørger for at feil og mangler oppdages tidlig gjennom testing og evaluering underveis.</li>
-          <li><strong>Kvalitet og brukertilpasning:</strong> Hjelper med å fange opp brukernes behov og sikrer at systemet løser problemet.</li>
-        </ul>
-      </section>
-
-      <section id="chatgpt">
-        <h2>Bruk av Chat‑GPT i denne oppgaven</h2>
-        <p>Vi har brukt dette verktøyet til ideer og forslag som satte oss i gang med oppgaven. Deretter har vi bearbeidet, diskutert sammen og skrevet selvstendig. Alle våre svar er egne.</p>
-      </section>
-
-      <section id="kilder">
-        <h2>Bibliografi</h2>
-        <p class="muted">Advania. (u.d.). <a href="https://www.advania.no/it-ordboka/systemutvikling" target="_blank" rel="noopener">Systemutvikling</a>.</p>
-      </section>
-
-      <footer>
-        <p>Designet for bruk i undervisning og som rask referanse. Lagret lokalt — kopier, lim inn og åpne i Visual Studio Code for videre redigering.</p>
-      </footer>
-    </article>
-  </main>
-
-  <script>
-    // Søk i teksten (enkelt, client-side)
-    const searchInput = document.getElementById('search');
-    const clearBtn = document.getElementById('clear');
-
-    searchInput.addEventListener('keydown', (e)=>{
-      if(e.key === 'Enter') doSearch();
-    });
-    clearBtn.addEventListener('click', ()=>{ searchInput.value=''; clearHighlights(); searchInput.focus(); });
-
-    function doSearch(){
-      clearHighlights();
-      const q = searchInput.value.trim();
-      if(!q) return;
-      const container = document.querySelector('article.card');
-      const regex = new RegExp(q, 'gi');
-      walkAndHighlight(container, regex);
-      // jump to first match
-      const first = document.querySelector('mark');
-      if(first) first.scrollIntoView({behavior:'smooth', block:'center'});
-    }
-
-    function walkAndHighlight(node, regex){
-      for(let child of Array.from(node.childNodes)){
-        if(child.nodeType === 3){ // text
-          const match = child.data.match(regex);
-          if(match){
-            const span = document.createElement('span');
-            span.innerHTML = child.data.replace(regex, (m)=>`<mark style="background:yellow;padding:0">${m}</mark>`);
-            child.parentNode.replaceChild(span, child);
-          }
-        } else {
-          walkAndHighlight(child, regex);
-        }
-      }
-    }
-    function clearHighlights(){
-      document.querySelectorAll('mark').forEach(m=>{
-        const parent = m.parentNode;
-        parent.replaceChild(document.createTextNode(m.textContent), m);
-        parent.normalize();
-      });
-    }
-  </script>
+  <footer>
+    <p>© 2025 | Skoleoppgave</p>
+  </footer>
 </body>
 </html>
