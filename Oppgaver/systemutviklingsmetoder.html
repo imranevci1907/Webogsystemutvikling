@@ -1,174 +1,153 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Hva mener vi med systemutvikling?</title>
   <style>
-    /* ======== Grunnstil ======== */
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #e6f0ff 0%, #f8ffff 100%);
       color: #1b1f23;
-      margin: 0;
-      padding: 0;
-    }
-
-    main {
+      margin: 40px auto;
       max-width: 950px;
-      margin: 60px auto;
+      line-height: 1.7;
       padding: 40px;
-      background: #fff;
+      box-shadow: 0 0 25px rgba(0,0,0,0.1);
       border-radius: 16px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease-in-out;
+      background-color: #ffffff;
+      transition: 0.3s ease-in-out;
     }
 
-    main:hover {
-      transform: translateY(-3px);
+    h1, h2 {
+      text-align: center;
+      color: #004d66;
     }
 
     h1 {
-      text-align: center;
-      font-size: 2.2rem;
-      color: #004d66;
-      letter-spacing: 0.5px;
-      margin-bottom: 15px;
+      font-size: 2rem;
+      letter-spacing: 1px;
     }
 
     h2 {
-      color: #007c91;
+      margin-top: 35px;
+      border-bottom: 3px solid #00a3a3;
+      padding-bottom: 6px;
       font-size: 1.4rem;
-      border-left: 5px solid #00a3a3;
-      padding-left: 10px;
-      margin-bottom: 12px;
     }
 
     p {
       font-size: 17px;
-      line-height: 1.7;
       margin-bottom: 15px;
     }
 
-    /* ======== Seksjoner ======== */
-    article {
-      margin-bottom: 40px;
-      background: #f9fcfc;
-      padding: 25px 30px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-      animation: fadeIn 0.6s ease;
+    .section {
+      margin-bottom: 30px;
     }
 
     .bibliografi {
-      background-color: #eaf6f6;
-      border-left: 6px solid #00a3a3;
       font-size: 15px;
+      color: #333;
+      background-color: #eaf6f6;
+      padding: 18px;
+      border-radius: 10px;
+      border-left: 5px solid #00a3a3;
     }
 
-    /* ======== Lenker ======== */
     a {
       color: #007c91;
       text-decoration: none;
       font-weight: 600;
+      word-break: break-word;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
-    /* ======== Knapp ======== */
-    .print-btn {
-      display: block;
-      margin: 20px auto 40px;
-      padding: 10px 22px;
-      background: #00a3a3;
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.2s ease, transform 0.1s ease;
-    }
-
-    .print-btn:hover {
-      background: #007c91;
-      transform: scale(1.03);
-    }
-
-    /* ======== Footer ======== */
     footer {
       text-align: center;
       font-size: 14px;
       color: #666;
-      margin-top: 50px;
-      padding-bottom: 30px;
+      margin-top: 40px;
     }
 
-    /* ======== Animasjon ======== */
+    .print-btn {
+      display: block;
+      width: fit-content;
+      margin: 15px auto 30px;
+      padding: 10px 20px;
+      background: #00a3a3;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s ease;
+    }
+
+    .print-btn:hover {
+      background: #007c91;
+    }
+
+    /* Litt animasjon for et mer moderne preg */
+    .section {
+      animation: fadeIn 0.6s ease;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ======== Responsivitet ======== */
-    @media (max-width: 700px) {
-      main {
+    @media (max-width: 650px) {
+      body {
         margin: 20px;
         padding: 25px;
       }
-      h1 {
-        font-size: 1.8rem;
-      }
-      h2 {
-        font-size: 1.2rem;
-      }
-      p {
-        font-size: 16px;
-      }
+      h1 { font-size: 1.6rem; }
+      h2 { font-size: 1.2rem; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Hva mener vi med systemutvikling?</h1>
-    <a href="#" class="print-btn" onclick="window.print()">Skriv ut siden</a>
+  <h1>Hva mener vi med systemutvikling?</h1>
 
-    <article>
-      <h2>Hva mener vi med systemutvikling?</h2>
-      <p>Systemutvikling defineres som arbeidet med å lage nye informasjonssystemer. Begrepet blir ofte brukt som bare selve prosessen og utformingen, men begrepet omhandler også arbeidet og metodene som kreves i hele prosessen. Dette kan for eksempel være å kartlegge problemstillinger, definere krav til programvaren, utvikle programvaren og sørge for kvalitet i alle ledd. Etter at vi utvikler systemet, må det også driftes på en sikker måte og vi må vedlikeholde om det er behov for dette. Når man utvikler gode systemer så automatiserer man prosesser, gjør kundeopplevelsen bedre og minsker risikoen for dataangrep. Det er også viktig å tenke på at systemutvikling er et prosjektarbeid. Prosjektet er problemorientert, tidsavgrenset, målrettet og sosialt. (Advania, u.d)</p>
-    </article>
+  <div class="section">
+    <h2>Hva mener vi med systemutvikling?</h2>
+    <p>Systemutvikling defineres som arbeidet med å lage nye informasjonssystemer. Begrepet blir ofte brukt som bare selve prosessen og utformingen, men begrepet omhandler også arbeidet og metodene som kreves i hele prosessen. Dette kan for eksempel være å kartlegge problemstillinger, definere krav til programvaren, utvikle programvaren og sørge for kvalitet i alle ledd. Etter at vi utvikler systemet, må det også driftes på en sikker måte og vi må vedlikeholde om det er behov for dette. Når man utvikler gode systemer så automatiserer man prosesser, gjør kundeopplevelsen bedre og minsker risikoen for dataangrep. Det er også viktig å tenke på at systemutvikling er et prosjektarbeid. Prosjektet er problemorientert, tidsavgrenset, målrettet og sosialt. (Advania, u.d)</p>
+  </div>
 
-    <article>
-      <h2>Hva mener vi med systemutviklingsmetoder?</h2>
-      <p>Systemutviklingsmetoder er metoder innenfor programvareutvikling som brukes til å planlegge og strukturere en prosess for å utvikle et informasjonssystem.</p>
-      <p>Systemutviklingsmetoder er delt inn i to kategorier: strukturerte metoder og lettvektsmetoder.</p>
-    </article>
+  <div class="section">
+    <h2>Hva mener vi med systemutviklingsmetoder?</h2>
+    <p>Systemutviklingsmetoder er metoder innenfor programvareutvikling som brukes til å planlegge og strukturere en prosess for å utvikle et informasjonssystem.</p>
+    <p>Systemutviklingsmetoder er delt inn i to kategorier: strukturerte metoder og lettvektsmetoder.</p>
+  </div>
 
-    <article>
-      <h2>Typer metoder</h2>
-      <p><strong>Strukturerte metoder</strong> er fremgangsmåter som brukes for å utvikle informasjonssystemer på en planlagt, forutsigbar og systematisk måte. Kort sagt: klare trinn og regler for hvordan man går fram i utviklingsprosessen. Eksempler er Waterfall-metoden, design to schedule, shashimi-modellen og spiral-modellen.</p>
-      <p><strong>Lettvektsmetoder</strong> legger vekt på fleksibilitet, samarbeid og raske tilpasninger, i stedet for tunge og vanskelige prosesser og mye dokumentasjon. Vi kaller det for lettvekte metoder fordi det er mindre krav til formell dokumentasjon, færre regler og mer fokus på mennesker og samarbeid. Eksempler på lettvektsmetoder er crystal methods, extreme programming, lean development og scrum.</p>
-      <p>Det er også mulig å kombinere begge metodene sammen. Ofte deler man systemutviklingen inn i faser/steg med forskjellige arbeidsoppgaver som for eksempel er analysering, design og vedlikehold.</p>
-    </article>
+  <div class="section">
+    <h2>Typer metoder</h2>
+    <p><strong>Strukturerte metoder</strong> Strukturerte metoder er fremgangsmåter som brukes for å utvikle informasjonssystemer på en planlagt, forutsigbar og systematisk måte. Kort sagt: klare trinn og regler for hvordan man går fram i utviklingsprosessen. Eksempler er Waterfall-metoden, design to schedule, shashimi-modellen og spiral-modellen.</p>
+    <p><strong>Lettvektsmetoder</strong> legger vekt på fleksibilitet, samarbeid og raske tilpasninger, i stedet for tunge og vanskelige prosesser og mye dokumentasjon. Vi kaller det for lettvekte metoder fordi det er mindre krav til formell dokumentasjon, færre regler og mer fokus på mennesker og samarbeid. Eksempler på lettvektsmetoder er crystal methods, extreme programming, lean development og scrum.</p>
+    <p> Det er også mulig å kombinere begge metodene sammen. Ofte deler man systemutviklingen inn i faser/steg med forskjellige arbeidsoppgaver som for eksempel er analysering, design og vedlikehold.</p>
+  </div>
 
-    <article>
-      <h2>Hvorfor bruker vi systemutviklingsmetoder?</h2>
-      <p>Systemutviklingsmetoder er viktig fordi IT-systemer er kompliserte, og uten en metode blir det fort ustrukturert, dyrt og risikabelt. En metode gir oss rammer, retningslinjer og verktøy som hjelper utviklere og brukere til å jobbe mer effektivt sammen. Noen av de viktigste grunnene til at vi bruker systemutviklingsmetoder er: struktur og kontroll, bedre kommunikasjon, redusere risiko og kvalitet og brukertilpasning. Struktur og kontroll gir oss en plan for hvordan vi går fra en idé til et ferdig system. Vi unngår også å hoppe over viktige steg i prosessen. Med bedre kommunikasjon skaper vi et felles språk mellom utviklere, brukere og kunder. Bruk av modeller og diagrammer gjør det enklere for oss å forstå komplekse systemer. Vi reduserer også risiko fordi metoden sørger for at feil og mangler oppdages tidlig. Dette gir oss mulighet til å teste og evaluere underveis. Kvalitet og brukertilpasning hjelper oss med å fange opp brukernes behov og sørger for at systemet løser problemet.</p>
-    </article>
+  <div class="section">
+    <h2>Hvorfor bruker vi systemutviklingsmetoder?</h2>
+    <p> Systemutviklingsmetoder er viktig fordi IT-systemer er komplisert og uten en metode blir det fort ustrukturert, dyrt og risikabelt. En metode gir oss rammer, retningslinjer og verktøy som hjelper utviklere og brukere til å jobbe mer effektivt sammen. Noen av de viktigste grunnene til at vi bruker systemutviklingsmetoder er: struktur og kontroll, bedre kommunikasjon, redusere risiko og kvalitet og brukertilpasning. Struktur og kontroll gir oss en plan for hvordan vi går fra en ide til et ferdig system. Vi unngår også å hoppe over viktige steg i prosessen. Med bedre kommunikasjon skaper vi et felles språk mellom utviklere, brukere og kunder. Bruk av modeller og diagrammer gjør det enklere for oss å forstå komplekse systemer. Vi reduserer også risiko fordi metoden sørger for at feil og mangler oppdages tidlig. Dette gir oss mulighet til å teste og evaluere underveis. Kvalitet og brukertilpasning hjelper oss med å fange opp brukernes behov og sørger for at systemet løser problemet. </p>
+  </div>
 
-    <article>
-      <h2>Bruk av ChatGPT i denne oppgaven</h2>
-      <p>I arbeidet med denne oppgaven har vi brukt dette verktøyet som et støtteverktøy. Vi har brukt det til forslag og ideer og samtidig for å se om vi er på rett spor. Alle forslag og ideer har blitt vurdert og vi har reflektert hvordan de kan være relevante for dette arbeidet. Det endelige innholdet er alle våre egne.</p>
-    </article>
+  <div class="section">
+    <h2>Bruk av Chat-GPT i denne oppgaven</h2>
+    <p>I arbeidet med denne oppgaven har vi brukt dette verktøyet som et støtteverktøy. Vi har brukt det til forslag og ideer og samtidig for å se om vi er på rett spor. Alle forslag og ideer har blitt vurdert og vi har reflektert hvordan de kan være relevante for dette arbeidet. Det endelige innholdet er alle våre egne.</p>
+  </div>
 
-    <article class="bibliografi">
-      <h2>Bibliografi</h2>
-      <p>Advania. (u.d.). <a href="https://www.advania.no/it-ordboka/systemutvikling" target="_blank" rel="noopener">Systemutvikling — Advania</a></p>
-    </article>
+  <div class="section bibliografi">
+    <h2>Bibliografi</h2>
+    <p>Advania. (u.d.). <a href="https://www.advania.no/it-ordboka/systemutvikling" target="_blank" rel="noopener">Systemutvikling — Advania</a></p>
+  </div>
 
-    <footer>
-      <p>© Systemutviklingsmetoder gruppe ball 3</p>
-    </footer>
-  </main>
+  <footer>
+    <p>© Systemutviklingsmetoder gruppe ball 3</p>
+  </footer>
 </body>
 </html>
+
