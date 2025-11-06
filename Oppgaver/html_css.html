@@ -1,57 +1,64 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <title>HTML & CSS – Gruppas kode</title>
+  <meta charset="UTF-8" />
+  <title>HTML & CSS – Gruppas kode (kun kodevisning)</title>
   <style>
+    :root { --maxw: 1100px; }
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #f6f7f9;
       color: #222;
       margin: 0;
-      padding: 40px;
+      padding: 32px 16px 80px;
     }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
+    h1 { text-align: center; margin: 0 0 24px; }
+    .intro { text-align: center; margin: 0 auto 24px; max-width: var(--maxw); color:#444; }
     section {
-      background-color: #fff;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 16px;
+      margin: 18px auto;
+      max-width: var(--maxw);
+    }
+    section h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      color: #0f172a;
+    }
+    .meta {
+      font-size: 13px; color:#6b7280; margin-bottom: 10px;
+    }
+    textarea.code {
+      width: 100%;
+      border: 1px solid #e5e7eb;
+      background: #0f172a;
+      color: #e5e7eb;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin: 30px auto;
-      padding: 20px;
-      max-width: 1000px;
+      padding: 14px;
+      font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+      font-size: 13px;
+      line-height: 1.45;
+      resize: vertical;
+      min-height: 360px;
+      white-space: pre;
+      overflow: auto;
     }
-
-    h2 {
-      color: #003366;
-      text-align: center;
-    }
-
-    pre {
-      background-color: #1e1e1e;
-      color: #dcdcdc;
-      padding: 20px;
-      border-radius: 8px;
-      overflow-x: auto;
-      white-space: pre-wrap;
-      font-size: 14px;
-    }
-
-    code {
-      font-family: Consolas, monospace;
-    }
+    .hint { font-size: 12px; color:#6b7280; margin-top: 8px; }
   </style>
 </head>
 <body>
   <h1>HTML & CSS – Gruppas kode</h1>
+  <p class="intro">Under vises koden til hvert gruppemedlem som ren tekst. Nettleseren kjører ikke koden – den vises kun for innlevering og vurdering.</p>
 
+  <!-- 1) IMRAN -->
   <section>
     <h2>Imran sin kode</h2>
-    <pre><code>
+    <div class="meta">Fil: (egen side) – uendret innhold</div>
+    <textarea class="code" spellcheck="false" readonly>
 <!DOCTYPE html>
 <html lang="no">
 <head>
@@ -61,8 +68,8 @@
 
   <style>
   html, body {
-    height: 100%;
-    margin: 0;
+    height: 100%; /* ← viktig! fyller hele høyden */
+    margin: 0; /* fjerner standard margin */
   }
 
   body {
@@ -73,7 +80,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-start; /* eller 'center' hvis du vil sentrere alt vertikalt */
     padding: 30px;
   }
 
@@ -114,13 +121,15 @@
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV6MJKhlfJbXglogQHcVsu5zPi9ewMv7lQlQ&s" alt="Real Madrid logo" width="450">
 </body>
 </html>
-    </code></pre>
+    </textarea>
+    <div class="hint">Tips: Marker og kopier for å hente koden direkte.</div>
   </section>
 
-
+  <!-- 2) AHMED -->
   <section>
     <h2>Ahmed sin kode</h2>
-    <pre><code>
+    <div class="meta">Fil: (egen side) – uendret innhold</div>
+    <textarea class="code" spellcheck="false" readonly>
 <!DOCTYPE html>
 <html lang="no">
 <head>
@@ -149,18 +158,62 @@
 <p>På bildet nedenfor ser du et bilde av meg sammen med min største inspirasjon, mamma.</p>
 <img src="https://raw.githubusercontent.com/imranevci1907/Webogsystemutvikling/refs/heads/main/Ahmed/Ahmedbilde.jpg" alt="Ahmed sammen med mamma" width="250" height="275">
 
-<h2>Lenke</h2>
-<p>Besøk THE WORLD CHAMPIONS <a href="https://www.chelseafc.com/en" target="_blank">Chelsea sin nettside</a>.</p>
+  
+
+  <h2>Lenke</h2>
+  <p>Besøk THE WORLD CHAMPIONS <a href="https://www.chelseafc.com/en" target="_blank">Chelsea sin nettside</a>.</p>
 
 </body>
 </html>
-    </code></pre>
+    </textarea>
   </section>
 
-
+  <!-- 3) CHRISTIAN -->
   <section>
     <h2>Christian sin kode</h2>
-    <pre><code>
+    <div class="meta">Fil: (egen side) – uendret innhold</div>
+    <textarea class="code" spellcheck="false" readonly>
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om meg</title>
+<link rel="stylesheet" href="Christian/stylefornett.css">
+</head>
+<body>
+    
+<header>
+    <h1>Velkommen til min sin side</h1>
+  </header>
+<main>
+  <div class="top-line"></div>
+    <h2>Hei!</h2>
+    <p>Jeg heter <strong>Christian</strong> og jeg støtter Liverpool</p>
+
+    <h3>Interesser</h3>
+    <p>Jeg elsker fotball og historie</p>
+
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" alt="Liverpool FC" width="200">
+ <a href="https://www.liverpoolfc.com" style="font-size: 24px; color: red;">
+  Besøk Liverpool Football Club sin nettside
+</a>
+
+  </main>
+
+  <footer>
+    <p>Laget av Christian © 2025</p>
+  </footer>
+
+</body>
+</html>
+
+<!-- ========================== -->
+<!--      Christian sin kode     -->
+<!-- ========================== -->
+
+<h2>Christian sin HTML/CSS-side</h2>
+<code>
 <!DOCTYPE html>
 <html lang="no">
 <head>
@@ -195,13 +248,15 @@
 
 </body>
 </html>
-    </code></pre>
+</code>
+    </textarea>
   </section>
 
-
+  <!-- 4) EDGARAS -->
   <section>
     <h2>Edgaras sin kode</h2>
-    <pre><code>
+    <div class="meta">Fil: (egen side) – uendret innhold</div>
+    <textarea class="code" spellcheck="false" readonly>
 <!doctype html>
 <html>
 <head>
@@ -248,8 +303,248 @@
 <body>
   <h1>Hei jeg heter Edgaras</h1>
   <p>Dette er nettside om fotball. <br/> Favoritt laget mitt er <strong>Barcelona</strong> var fan av klubben i flere &aring;r, og dette var litt info om meg selv.</p>
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABhlBMVEX////ouAgAU6PiFzeiAEb/3QAiHx/suwcAAADitAj/4wDrugekAET/4ACuixLvvQYAACAIChkAUJz6uQ3gADkWSpnvfCSbAESpAD7+2QP/5gDscisADh7nSzL7xQ7iBTb0mxsvMRySGlgtIwEbGh+VlJb0tr7hACWFGCsAABEtJh4UFSDmSl0YGB/86+0ACyCdl3iVghR/ZhcAFB9mUxqQNySTCkEUEBDYrArBmQ7v7++6lA9FOhxzXRh9fHyJbhaggBPb29tQTk7OpAw4NTXDwsI5MR3k5OQNQXmtrKw2NDRXRxujghOCchaTdhXRGDXszAalpKTOzs5hX19BNxxcSxonJCRdW1t4d3ceGBJ0DzcyKx2bGi0oFiE+GSM7LgpSQANgGCZoWxsORYEYLEgYJTdeEzASM1zCGTOtGjA3ACTavgkjKB14GilGGSSuZB9SGSW4oA9MJSIOIR1pGSjQTS59UB7HrQ3lOE+YdlsmJzGHMT5fW0yPXR2IMSiMTCEzESZyFEbfyt8WAAAbaUlEQVR4nO1d/VvbWHaOm4xkIZBkNrvZsG7Y2Yi2WKtVx3aRhCRkEDYBOZ4BbAIYkm6AMOkk6U637bTTj03/894vfdmSkWQTO3l4f8gTQLq6r+6555x77rlH9+7d4Q53uMMd7nCHiWN9yvffNppUsTlWA7tFarwGbhfrx0WKKh7mH4b1Q9jA8cyO4z6lUgDq0W7OBnaPcANU3gZuF82tIkVQfLGZo4HNUANbsyeqB6R7koRGobiRVdKAhKtBA4Djwa30My+88ZOoRkOWMceVLBzXVzA/WW53KOkTjePx/k66CzdXtnH3RMXSeN7pKSLqobqSsoF7OytqETdQBw1oddyAWtxO28LOykbKR4WwUiyqL/ZvnE8HK1tFPH6iYOo8WyiwNNdX8Ciox2lE7eAQ86OUPseiBgwTcwQtbK3c2MTmPuhCcT8Vq/Bji+gtqnsbzaT3uNPcf3FUxMMH+HUNli4g0IWOgCUNDsPol7S5skdakIROwWuA5fqCSFooHh3uj+jD8Z6KGihmVW6qp9bAI4pbG/u7zU2MZrO5u79/DLl57ChRklyDJ92D4BmbzCb4ljaa8VNyvbmhek1IlM3wQQM0b7iSJAZdKO69ON4HvWj6/djd39gKukBRR9kIHsIbZSpMMwLVbxjQU1pVJ8wPcdTsi
+  <img src="data:image/png;base64,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…
+    </textarea>
+  </section>
 
+  <!-- 5) ESROM -->
+  <section>
+    <h2>Esrom sin kode</h2>
+    <div class="meta">Fil: (egen side) – uendret innhold</div>
+    <textarea class="code" spellcheck="false" readonly>
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Esrom</title>
+    <style>
+        /* Generelle stiler */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
+        /* Header og navigasjon */
+        header {
+            background-color: #DA291C; /* Arsenal-rød */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
 
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
 
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hovedinnhold */
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #000080; /* mørk blå for kontrast */
+        }
+
+        h2 {
+            color: #DA291C;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        /* Bilde */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            margin: 20px 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #DA291C;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Velkommen til Esrom sin side</h1>
+        
+    </header>
+
+    <main>
+        <section id="om-meg">
+            <h2>Om Meg</h2>
+            <p>Hei! Jeg heter Esrom, jeg er 20 år gammel og kommer fra Eritrea. Dette er min personlige nettside hvor jeg deler litt om meg selv og mine interesser.</p>
+            <img src="https://placekitten.com/600/400" alt=
+        
+
+        <section id="hobby">
+            <h2>Hobby</h2>
+            <p>Jeg elsker å spille fotball og se på fotballkamper. Jeg liker også å trene styrke og holde meg i form.</p>
+        </section>
+
+        <section id="favorittlag">
+            <h2>Favorittlag</h2>
+            <p>Mitt favorittlag er Arsenal!</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg" alt="Arsenal logo">
+            <p>Besøk <a href="https://www.arsenal.com" target="_blank">Arsenals offisielle nettside</a> for nyheter, kamper og spillere!</p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Esrom
+    </footer>
+
+</body>
+</html>
+    </textarea>
+  </section>
+
+  <!-- 6) HAMZE -->
+  <section>
+    <h2>Hamze sin kode</h2>
+    <div class="meta">Fil: (egen side) – uendret innhold</div>
+    <textarea class="code" spellcheck="false" readonly>
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>Om Hamze</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background-color: #f0f2f5;
+      font-family: Verdana, Geneva, sans-serif;
+      color: #222;
+      text-align: center;
+      margin: 40px;
+    }
+
+    h1 {
+      color: #003366;
+      font-size: 2em;
+    }
+
+    h2 {
+      color: #660000;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #b30000;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ff0000;
+      text-decoration: underline;
+    }
+
+    img {
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hei! Jeg er Hamze</h1>
+  <p>Jeg liker å spille fotball på fritiden.</p>
+  <p>Mitt favorittlag er <strong>Liverpool FC</strong>!</p>
+
+  <h2>Mer informasjon</h2>
+  <p>
+    Du kan besøke <a href="https://www.liverpoolfc.com/" target="_blank">den offisielle Liverpool-nettsiden</a> for nyheter og oppdateringer.
+  </p>
+
+  <h2>Logo</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" alt="Liverpool FC-logo" width="350">
+</body>
+</html>
+    </textarea>
+  </section>
+
+  <!-- 7) JOHANNES -->
+  <section>
+    <h2>Johannes sin kode</h2>
+    <div class="meta">Fil: (egen side) – uendret innhold</div>
+    <textarea class="code" spellcheck="false" readonly>
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>Cristiano Ronaldo</title>
+  <style>
+    body {
+      background-color: lightyellow;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: darkblue;
+      text-align: left;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    img {
+      width: 300px;
+      border-radius: 10px;
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Cristiano Ronaldo</h1>
+
+<p>Jeg har valgt Cristiano Ronaldo fordi han er en stor inspirasjon for meg. Han viser at hardt arbeid, disiplin og vilje kan ta deg helt til toppen.</p>
+
+<p>På bildet nedenfor ser du ham i sin tid hos Manchester United.</p>
+
+<img src="https://assets.manutd.com/AssetPicker/images/0/0/10/126/687707/Legends-Profile_Cristiano-Ronaldo1523460877263.jpg" alt="Cristiano Ronaldo">
+
+<h2>Lenke</h2>
+<p>Les mer om <a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo" target="_blank">Cristiano Ronaldo her</a>.</p>
+
+</body>
+</html>
+    </textarea>
+  </section>
+
+</body>
+</html>
