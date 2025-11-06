@@ -1,103 +1,127 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Webprosjekt – Våre nettsider</title>
+  <meta charset="UTF-8">
+  <title>HTML & CSS Oppgave – Gruppas kode</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #f3f4f6, #dce3f0);
-      color: #333;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
       margin: 0;
-      padding: 0;
+      padding: 40px;
     }
 
-    header {
+    h1, h2 {
       text-align: center;
-      padding: 2rem 1rem;
-      background: #1e3a8a;
-      color: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    main {
+    section {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 30px auto;
+      padding: 20px;
       max-width: 900px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
     }
 
-    .card {
-      background: white;
-      border-radius: 16px;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-    }
-
-    .card h2 {
-      margin-bottom: 1rem;
-      color: #1e3a8a;
-    }
-
-    .card a {
-      display: inline-block;
-      padding: 0.7rem 1.5rem;
-      margin-top: 0.5rem;
-      background: #1e3a8a;
-      color: white;
-      text-decoration: none;
+    pre {
+      background-color: #1e1e1e;
+      color: #dcdcdc;
+      padding: 20px;
       border-radius: 8px;
-      font-weight: 500;
-      transition: background 0.2s;
+      overflow-x: auto;
+      white-space: pre-wrap; /* bryter linjer ved behov */
     }
 
-    .card a:hover {
-      background: #3b82f6;
+    code {
+      font-family: Consolas, monospace;
     }
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #1e3a8a;
-      color: white;
-      margin-top: 3rem;
+    a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+  <h1>HTML & CSS Oppgave</h1>
+  <p style="text-align:center;">Her ligger koden til alle gruppemedlemmene. Klikk på navnene på forsiden for å se de ferdige nettsidene visuelt.</p>
 
-  <header>
-    <h1>Webprosjekt – Våre nettsider</h1>
-    <p>Trykk på navnene for å se hver sin side</p>
-  </header>
+  <!-- IMRAN SIN KODE -->
+  <section>
+    <h2>Imran sin kode</h2>
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="no"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Om Imran&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
 
-  <main>
-    <div class="card">
-      <h2>Ahmed sin side</h2>
-      <p>Utforsk nettsiden til Ahmed som viser oppgaven i Web- og systemutvikling.</p>
-      <a href="https://dokploy.usn.no/app/imevc4485-Webogsystemutvikling/Ahmed/index.html" target="_blank">Gå til siden</a>
-    </div>
+  &lt;style&gt;
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
 
-    <div class="card">
-      <h2>Christian sin side</h2>
-      <p>Besøk Christians nettside som demonstrerer prosjektet og funksjonaliteten.</p>
-      <a href="https://dokploy.usn.no/app/imevc4485-Webogsystemutvikling/Christian/index.html" target="_blank">Gå til siden</a>
-    </div>
-  </main>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #ffffff, #e6e6ff, #f9f4dc);
+    color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px;
+  }
 
-  <footer>
-    <p>&copy;</p>
-  </footer>
+  h1 {
+    color: darkblue;
+  }
 
+  p {
+    font-size: 18px;
+  }
+
+  a {
+    color: darkred;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  img {
+    margin-top: 15px;
+  }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hei, jeg heter Imran!&lt;/h1&gt;   
+  &lt;p&gt;Jeg er glad i fotball⚽&lt;/p&gt;
+  &lt;p&gt;Favoritt fotballaget mitt er &lt;strong&gt;Real Madrid&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;h2&gt;Lenke&lt;/h2&gt;
+  &lt;p&gt;
+    Besøk &lt;a href="https://www.realmadrid.com/en-US" target="_blank"&gt;Real Madrid sin nettside&lt;/a&gt;
+  &lt;/p&gt;
+
+  &lt;h2&gt;Bilde&lt;/h2&gt;
+  &lt;img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV6MJKhlfJbXglogQHcVsu5zPi9ewMv7lQlQ&amp;s" alt="Real Madrid logo" width="450"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+  </section>
+
+  <!-- Her legger dere til resten av gruppas kode etter hvert -->
 </body>
 </html>
